@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+
+<head>
+
+    <title>Random Recipe</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="centeredDiv">
+        <h1 class="headerStyle">Random Weird Food Recipes</h1>
+        <p class="mainTitles">
+            Would you like to see a random recipe? Click the below button.<br>
+        </p>
+        <button id="randomRecipe" class="recipeButton"> Random Recipe</button>
+
+
+        <div id="cheesecake" class="hidden">
+            <p class="foodTitles"> Rainbow Cheesecake</p>
+            <img class="foodImages" src="images/Untitled design.png">
+
+            <p class="paragraphs">
+                <p1 class="foodTitles"> Ingredients</p1> <br>
+                Rainbow sprinkles from the end of the rainbow.<br>
+                Pink Lily Extract<br>
+                Cloud Powders<br>
+                Easter Eggs(3) <br>
+            </p>
+
+            <p class="paragraphs">
+                <p1 class="foodTitles"> Instructions </p1> <br>
+                1- Crack the eggs and mix well.<br>
+                2- Add cloud powder while mixing.<br>
+                3-Add 2-3 drops of pink lily extract.<br>
+                4-Bake the cake mixture in the oven for 30-45 minutes at maximum heat.<br>
+                5-Finally let the cake cool for an hour and add rainbow sprinkles on top.<br>
+            </p>
+        </div>
+
+
+        <div id="tear" class="hidden">
+            <p class="foodTitles"> Unicorn Tear Drop Cake</p>
+            <img class="foodImages " src="images/Untitled design2.png">
+            <p class="paragraphs">
+                <p1 id="foodTitles">Ingredients </p1> <br>
+                Unicorn tears (very very very rare).<br>
+                Vanilla extract from the Smurfs Market<br>
+                3/4 cup of water from Paradise Falls<br>
+
+            </p>
+
+            <p class="paragraphs">
+                <p1 class="foodTitles"> Instructions </p1> <br>
+                1- Add 4-5 drops of Unicorn tears to your mixing bowl.<br>
+                2- Add vanilla extract and water then mix well.<br>
+                3-Pour mixture into molds.<br>
+                4-Place molds into the fridge to set for 10 hours.<br>
+            </p>
+        </div>
+
+
+        <div id="popsicle" class="hidden">
+            <p class="foodTitles"> Gold Honey Popsicle </p>
+            <img class="foodImages" src="images/Untitled design3.png">
+            <p class="paragraphs">
+                <p1 class="foodTitles"> Ingredients </p1> <br>
+                300 g of gold honey from the Yellow Forest(Be aware of the bee colonies).<br>
+                100 g of Gelatin from the lotuses of the Crystalstar Lake<br>
+                3/4 cup of water from Paradise Falls<br>
+
+            </p>
+            <p class="paragraphs">
+                <p1 class="foodTitles">Instructions</p1> <br>
+                1- Add the gelatin and water into a pan and cook for about 10 minutes until it gets creamy.<br>
+                2- Let the gelatin mix cool while you put honey into a golden bowl for the honey to release it's golden
+                color.<br>
+                3-Add the honey to gelatin mix and pour mixture into molds.<br>
+                4-Place molds into the fridge to set for 10 hours.<br>
+            </p>
+        </div>
+    </div>
+
+    <script src="example.js"></script>
+    <script>
+
+       
+        var button = document.getElementById("randomRecipe");
+        button.onclick = function () {
+
+            const randomNumber = randomNum();
+
+            switch (randomNumber) {
+
+                case 1:
+                    showDiv("cheesecake");
+                    hideDiv("tear");
+                    hideDiv("popsicle");
+
+                    break;
+
+                case 2:
+                    showDiv("tear");
+                    hideDiv("popsicle");
+                    hideDiv("cheesecake");
+
+
+                    break;
+                case 3:
+                    showDiv("popsicle");
+                    hideDiv("cheesecake");
+                    hideDiv("tear");
+
+                    break;
+            }
+
+
+        };
+    </script>
+
+</body>
+
+
+</html>
